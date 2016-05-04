@@ -1,0 +1,32 @@
+<head>
+    <title>Gossip Girl</title>
+</head>
+
+<body>
+    <h1>Gossip Girl</h1>
+	{{> person}}
+</body>
+<!--Template to be rendered for display-->
+
+<template name="person">
+		<input type="button" class="increment button" value="Click To Track The Selected Person">
+		<h1>Person Available For Tracking</h1>
+		<div class = "st1">
+
+		<ol>
+		{{#each display}}
+				<li class="people {{selectedClass}}" style="font-size:30px">{{name}}:{{checked}}</li>
+		{{/each}}
+		</ol>
+
+		</div>,
+		
+		<h2>Current Status of person</h2>
+		<div class="st2">
+		{{#each display1}}
+				<li class="people" style="font-size:35px">Name:{{name}}</li>
+				<p style="font-size:35px">Location:{{location}}</p>
+				<p style="font-size:30px">Contact:{{contact}}</p>
+		{{/each}}
+		</div>
+</template>
